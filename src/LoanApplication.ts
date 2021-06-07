@@ -1,11 +1,14 @@
+import { LoanStatus } from "./LoanStatus";
 import MortgageLender from "./MortgageLender";
 
 export default class LoanApplication {
-    loanAmount: number;
-    creditScore: number;
-    isQualified: boolean;
-    savings: number;
+
+    private _loanAmount: number;
     dti: number;
+    creditScore: number;
+    savings: number;
+
+    isQualified: boolean;
     loanStatus: any;
 
     constructor(loanAmount: number, dti: number, creditScore: number, savings: number) {
@@ -15,8 +18,22 @@ export default class LoanApplication {
         this.savings = savings; 
     }
 
-    isApproved(): void {
-        this.isQualified = true;
+    set loanAmount(loanAmt: number) {
+        this._loanAmount = loanAmt;
     }
+
+    get loanAmount(): number{
+        return this._loanAmount;
+    }
+
+    isApproved(): any {
+        if (this.loanStatus == LoanStatus.Approved) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
 
 }

@@ -3,4 +3,6 @@ export enum LoanStatus {
     Accepted,
     Rejected,
     Expired,
+    Approved,
+    Denied,
 }

@@ -15,7 +15,7 @@ Your final code should have:
 2. Descriptive commit messages.
 3. Multiple commits.
 4. Meet acceptance criteria.
-4. Have good use of the four pillars of OOP
+5. Have good use of the four pillars of OOP
 
 **Tips**
 
