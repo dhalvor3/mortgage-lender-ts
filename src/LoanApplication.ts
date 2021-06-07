@@ -9,7 +9,7 @@ export default class LoanApplication {
     savings: number;
 
     isQualified: boolean;
-    loanStatus: any;
+    loanStatus: LoanStatus;
 
     constructor(loanAmount: number, dti: number, creditScore: number, savings: number) {
         this.loanAmount = loanAmount;
@@ -26,7 +26,7 @@ export default class LoanApplication {
         return this._loanAmount;
     }
 
-    isApproved(): any {
+    isApproved(): boolean {
         if (this.loanStatus == LoanStatus.Approved) {
             return true;
         } else {
